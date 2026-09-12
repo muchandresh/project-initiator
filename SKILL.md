@@ -1,11 +1,11 @@
 ---
 name: project-initiator
-description: "Antigravity-focused universal pre-flight project initialization and idea discovery skill. Conducts an interactive thinking, planning, and asset research discovery (brand guidelines, visual assets, logos, reference URLs, and custom requirements) before generating in sequence: PRD & Idea Brief, ARCHITECTURE.md, AGENTS.md (with /vibe-map integration), strict Directory & File Structure Scaffolding with an immutable permission lock, and SECURITY_AND_PERFORMANCE.md."
+description: "Antigravity-focused universal pre-flight project initialization, idea discovery, and cross-agent handover skill. Conducts an interactive thinking, planning, and asset research discovery (brand guidelines, visual assets, logos, reference URLs, and custom requirements) before generating in sequence: PRD & Idea Brief, ARCHITECTURE.md, AGENTS.md (with /vibe-map integration), strict Directory & File Structure Scaffolding with an immutable permission lock, SECURITY_AND_PERFORMANCE.md, and HANDOVER.md for seamless cross-model & platform state transfer."
 ---
 
 # 🚀 Project Initiator
 
-> **An Antigravity-centric, cross-agent universal pre-flight protocol for initializing projects with deep planning, collaborative research, architectural alignment, strict scaffolding locks, and proactive guardrails before a single line of business logic is written.**
+> **An Antigravity-centric, cross-agent universal pre-flight protocol for initializing projects with deep planning, collaborative research, architectural alignment, strict scaffolding locks, proactive guardrails, and seamless cross-model handover before a single line of business logic is written.**
 
 ---
 
@@ -16,11 +16,13 @@ The most common failure mode in AI-assisted software engineering is **Premature 
 - It fails to ask about branding, design aesthetic, reference sites, or existing logos and assets.
 - It invents random file paths, scatters utilities across arbitrary folders, and creates circular dependencies.
 - It skips security best practices, ignores performance budgets, and leaves behind technical debt.
+- When switching between models, accounts, or platforms (e.g. Antigravity IDE to CLI, or Claude Code / Cursor), context is lost and the new agent wanders blindly.
 
-**`project-initiator`** halts premature code generation. It enforces a **Think-First, Research-Deep, Build-Locked** methodology:
+**`project-initiator`** halts premature code generation. It enforces a **Think-First, Research-Deep, Build-Locked, Handover-Ready** methodology:
 1. **Pause & Plan Collaboratively:** The agent thinks through the domain, plans the exploration roadmap with the user, and asks all necessary scoping questions.
 2. **Deep Research & Asset Discovery:** The agent solicits brand guidelines, logos, images, design systems, reference URLs, and specific business constraints.
-3. **5-Pillar Artifact Generation:** Once all inputs and research are consolidated and confirmed, it generates `PRD.md`, `ARCHITECTURE.md`, `AGENTS.md` (with `/vibe-map`), Scaffolding + `.structure_lock.json`, and `SECURITY_AND_PERFORMANCE.md`.
+3. **Pillar Artifact Generation:** Once all inputs and research are consolidated, it generates `PRD.md`, `ARCHITECTURE.md`, `AGENTS.md` (with `/vibe-map`), Scaffolding + `.structure_lock.json`, `SECURITY_AND_PERFORMANCE.md`, and `HANDOVER.md`.
+4. **Cross-Agent Handover & Map-First State:** Any incoming model or agent reads `HANDOVER.md`, ingests the codebase map/graph first, and picks up exactly where the last agent left off.
 
 ---
 
@@ -28,13 +30,13 @@ The most common failure mode in AI-assisted software engineering is **Premature 
 
 While deeply integrated with Antigravity native capabilities (`ask_question`, Artifacts, markdown links, `read_url_content`), `project-initiator` is **100% universal** and operates natively across all major agent ecosystems:
 
-| Platform | Collaborative Planning & Discovery | Asset & Reference Research | Scaffolding & Lock Enforcement |
-| :--- | :--- | :--- | :--- |
-| **Google Antigravity** | Native modal `ask_question` UI | `read_url_content`, Web Search, Artifacts | Native file tools + `init_scaffold.py` + Artifacts |
-| **Claude Code** | Numbered interactive CLI menus | `WebFetch`, `curl`, local file inspection | Shell execution + `.structure_lock.json` |
-| **Cursor / Windsurf** | Interactive chat numbered prompts | Chat URL attachments & local file reads | Workspace files + rules enforcement |
-| **Cline / Roo-Code** | Interactive prompt iterations | Web browser tool / local file tools | Direct tool calls + lockfile verification |
-| **OpenAI / ChatGPT** | Structured markdown Q&A rounds | Web browsing tool & image uploads | Canvas / Direct workspace files |
+| Platform | Collaborative Planning & Discovery | Asset & Reference Research | Scaffolding & Lock Enforcement | Cross-Platform Handover |
+| :--- | :--- | :--- | :--- | :--- |
+| **Google Antigravity** | Native modal `ask_question` UI | `read_url_content`, Web Search, Artifacts | Native file tools + `init_scaffold.py` + Artifacts | `HANDOVER.md` + `/vibe-map` |
+| **Claude Code** | Numbered interactive CLI menus | `WebFetch`, `curl`, local file inspection | Shell execution + `.structure_lock.json` | `HANDOVER.md` + `/vibe-map` |
+| **Cursor / Windsurf** | Interactive chat numbered prompts | Chat URL attachments & local file reads | Workspace files + rules enforcement | `HANDOVER.md` + `/vibe-map` |
+| **Cline / Roo-Code** | Interactive prompt iterations | Web browser tool / local file tools | Direct tool calls + lockfile verification | `HANDOVER.md` + `/vibe-map` |
+| **OpenAI / ChatGPT / Codex** | Structured markdown Q&A rounds | Web browsing tool & image uploads | Canvas / Direct workspace files | `HANDOVER.md` + `/vibe-map` |
 
 ---
 
@@ -43,12 +45,13 @@ While deeply integrated with Antigravity native capabilities (`ask_question`, Ar
 Activate this skill whenever the user asks for:
 - `/project-init` or `/project-initiator`
 - `!project-init` or `!init`
+- `/handover` or *"Prepare handover"* / *"Switching to CLI / another agent"*
 - *"Initialize a new project"*
 - *"Start a new project for [idea]"*
 - *"Help me plan and initiate my project before building"*
 - *"Run project initiator"*
 - *"Idea discussion setup for a new app"*
-- *"Setup project architecture and scaffolding"*
+- *"Setup project architecture, scaffolding, and handover"*
 
 ---
 
@@ -209,17 +212,40 @@ Establish non-negotiable security guardrails and performance budgets:
 
 ---
 
+### 🤝 Pillar 6: Cross-Model & Platform Handover (`HANDOVER.md`)
+
+Eliminate context degradation and onboarding friction when switching models, interfaces, accounts, or platforms:
+
+1. **State Persistence & Priority Punch List**:
+   - Maintains current project state, last active task, blockers, and an ordered priority punch list for the incoming agent.
+   - Maintains a historical session changelog tracking handoffs across agents and dates.
+2. **THE MAP / GRAPH FIRST ONBOARDING MANDATE**:
+   > [!IMPORTANT]
+   > Any incoming agent (whether switching from Antigravity to `agy` CLI, Claude Code, Cursor, Windsurf, or Codex) MUST:
+   > 1. Read [`HANDOVER.md`](file:///HANDOVER.md) first.
+   > 2. Ingest the codebase map/graph first (`vibe-map-out/VIBE_MAP.md` or `vibe-map-out/codebase_map.json`) before inspecting individual code files.
+   > 3. Verify `.structure_lock.json` to respect directory boundaries.
+   > 4. Resume directly from Priority 1 on the punch list.
+3. **Session Handoff Update Rule**:
+   - Before ending a session or when the user invokes `/handover`:
+     - Update in-progress status and next punch list items in `HANDOVER.md`.
+     - Run `/vibe-map update` to ensure visual maps are synchronized.
+4. **Deliverable:** Write [`HANDOVER.md`](file:///HANDOVER.md) to the project root and provide a clickable link.
+
+---
+
 ## 🎯 Verification & Handoff
 
-Once all 5 pillars are established:
+Once all pillars are established:
 1. Run structural integrity verification:
    ```bash
    python3 scripts/init_scaffold.py --verify
    ```
 2. Display a polished summary table to the user:
-   - [PRD.md](file:///PRD.md)
-   - [ARCHITECTURE.md](file:///ARCHITECTURE.md)
-   - [AGENTS.md](file:///AGENTS.md)
-   - [.structure_lock.json](file:///.structure_lock.json)
-   - [SECURITY_AND_PERFORMANCE.md](file:///SECURITY_AND_PERFORMANCE.md)
+   - [PRD.md](file:///PRD.md) — Product Requirements Document & Idea Brief
+   - [ARCHITECTURE.md](file:///ARCHITECTURE.md) — System Design & Technology Blueprint
+   - [AGENTS.md](file:///AGENTS.md) — Operational Rules & `/vibe-map` Integration
+   - [.structure_lock.json](file:///.structure_lock.json) — Enforced Directory Lock Manifest
+   - [SECURITY_AND_PERFORMANCE.md](file:///SECURITY_AND_PERFORMANCE.md) — Mandatory Guardrails & Budgets
+   - [HANDOVER.md](file:///HANDOVER.md) — Cross-Model & Platform Continuity State
 3. Prompt the user: *"All pre-flight foundations are locked and verified. Would you like to begin implementing Milestone 1 from the PRD?"*

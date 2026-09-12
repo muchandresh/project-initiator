@@ -55,7 +55,21 @@ Before writing or altering any production code:
 
 ---
 
-## 🛠️ 4. Code Quality & Implementation Standards
+### 🤝 4. CROSS-MODEL & PLATFORM HANDOVER PROTOCOL
+When starting or ending work, or transferring between models (Gemini, Claude, GPT, Codex), interfaces (Antigravity IDE vs CLI), or platforms (Cursor, Windsurf, Claude Code):
+
+1. **Incoming Agent (Start of Session):**
+   - **READ [HANDOVER.md](file:///HANDOVER.md) FIRST.** Do not begin coding or searching randomly.
+   - **MAP / GRAPH FIRST:** Load `vibe-map-out/VIBE_MAP.md` or `codebase_map.json` to ingest the codebase structure immediately.
+   - Resume directly from the priority punch list in `HANDOVER.md`.
+2. **Outgoing Agent (End of Session / Handoff):**
+   - Update `HANDOVER.md` with: completed items, exact in-progress file/task state, and next priority items.
+   - Run `/vibe-map update` so the incoming agent receives an up-to-date map.
+   - Append an entry to the Handover Session Changelog.
+
+---
+
+## 🛠️ 5. Code Quality & Implementation Standards
 
 - **Complete Implementations Only:** Never write stub implementations, fake mock data, or omit logic with comments like `// TODO: implement later`. Complete all logic end-to-end.
 - **Strict Typing:** All code must be strongly typed (e.g. TypeScript with zero `any`, Python with strict PEP 484 type hints).

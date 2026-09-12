@@ -13,12 +13,15 @@ from datetime import datetime
 from pathlib import Path
 
 DEFAULT_DIRECTORIES = [
+    ".agents",
     ".agents/skills",
+    "src",
     "src/core",
     "src/api",
     "src/models",
     "src/services",
     "src/utils",
+    "tests",
     "tests/unit",
     "tests/integration",
     "config",
@@ -28,6 +31,7 @@ DEFAULT_FILES = [
     "PRD.md",
     "ARCHITECTURE.md",
     "AGENTS.md",
+    "HANDOVER.md",
     "SECURITY_AND_PERFORMANCE.md",
     ".structure_lock.json",
     ".gitignore",
@@ -123,10 +127,13 @@ def verify_structure(project_root: Path) -> bool:
         if first_segment in allowed_system_paths or ".git" in rel_root:
             continue
 
-        if rel_root and rel_root not in auth_dirs:
-            # Check if any parent is authorized or exact match
-            if not any(rel_root.startswith(d) for d in auth_dirs):
-                violations.append(f"Unauthorized Directory: {rel_root}")
+        rel_root_norm = rel_root.replace("\\", "/")
+        if rel_root_norm and rel_root_norm not in auth_dirs:
+            # Check if any parent is authorized or if rel_root is a prefix of any authorized dir
+            is_parent_of_auth = any(d == rel_root_norm or d.startswith(rel_root_norm + "/") for d in auth_dirs)
+            is_child_of_auth = any(rel_root_norm.startswith(d + "/") for d in auth_dirs)
+            if not (is_parent_of_auth or is_child_of_auth):
+                violations.append(f"Unauthorized Directory: {rel_root_norm}")
 
         for f in files:
             if f in allowed_system_paths or f == ".gitkeep":

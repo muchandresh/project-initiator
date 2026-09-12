@@ -27,6 +27,7 @@
     "PRD.md",
     "ARCHITECTURE.md",
     "AGENTS.md",
+    "HANDOVER.md",
     "SECURITY_AND_PERFORMANCE.md",
     ".structure_lock.json",
     ".gitignore",

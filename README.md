@@ -23,7 +23,8 @@ flowchart TD
     C --> D[3. Agent Rules & Vibe-Map]
     D --> E[4. Scaffolding & Structure Lock]
     E --> F[5. Security & Performance Spec]
-    F --> G[✨ Foundation Locked: Ready to Build]
+    F --> G[6. HANDOVER.md & Graph-First State]
+    G --> H[✨ Foundation Locked: Ready to Build]
 ```
 
 ---
@@ -66,17 +67,22 @@ flowchart TD
 - Security specifications: Zero hardcoded secrets, mandatory `.env.example`, input validation schemas (Zod/Pydantic), SQL injection prevention, safe error masking.
 - Performance budgets: Explicit latency thresholds (API P95 < 100ms), database index rules, memory limits, and frontend bundle caps (< 150KB gzip).
 
+### 6. `HANDOVER.md` (Cross-Model & Platform Continuity State)
+- Eliminates context loss when switching between models (Gemini, Claude, GPT, Codex), accounts, or tools (`agy` CLI, Cursor, Windsurf).
+- **The Map/Graph First Mandate:** Incoming agents MUST inspect `VIBE_MAP.md` / `codebase_map.json` before writing code.
+- Outlines exact completed tasks, in-progress state, blockers, and an ordered priority punch list.
+
 ---
 
 ## 🌐 Cross-Platform Compatibility
 
-| Agent Platform | Collaborative Planning & Discovery | Asset & Reference Research | Scaffolding & Lock Enforcement |
-| :--- | :--- | :--- | :--- |
-| **Google Antigravity** | Native modal `ask_question` UI | `read_url_content`, Web Search, Artifacts | Native file tools + `init_scaffold.py` + Artifacts |
-| **Claude Code** | Numbered interactive CLI menus | `WebFetch`, `curl`, local file inspection | Shell execution + `.structure_lock.json` |
-| **Cursor / Windsurf** | Interactive chat numbered prompts | Chat URL attachments & local file reads | Workspace files + rules enforcement |
-| **Cline / Roo-Code** | Interactive prompt iterations | Web browser tool / local file tools | Direct tool calls + lockfile verification |
-| **OpenAI / ChatGPT** | Structured markdown Q&A rounds | Web browsing tool & image uploads | Canvas / Direct workspace files |
+| Agent Platform | Collaborative Planning & Discovery | Asset & Reference Research | Scaffolding & Lock Enforcement | Cross-Platform Handover |
+| :--- | :--- | :--- | :--- | :--- |
+| **Google Antigravity** | Native modal `ask_question` UI | `read_url_content`, Web Search, Artifacts | Native file tools + `init_scaffold.py` + Artifacts | `HANDOVER.md` + `/vibe-map` |
+| **Claude Code** | Numbered interactive CLI menus | `WebFetch`, `curl`, local file inspection | Shell execution + `.structure_lock.json` | `HANDOVER.md` + `/vibe-map` |
+| **Cursor / Windsurf** | Interactive chat numbered prompts | Chat URL attachments & local file reads | Workspace files + rules enforcement | `HANDOVER.md` + `/vibe-map` |
+| **Cline / Roo-Code** | Interactive prompt iterations | Web browser tool / local file tools | Direct tool calls + lockfile verification | `HANDOVER.md` + `/vibe-map` |
+| **OpenAI / ChatGPT / Codex** | Structured markdown Q&A rounds | Web browsing tool & image uploads | Canvas / Direct workspace files | `HANDOVER.md` + `/vibe-map` |
 
 ---
 
