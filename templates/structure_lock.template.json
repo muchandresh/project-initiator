@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "project": "{{PROJECT_NAME}}",
+  "initialized_at": "{{DATE}}",
+  "lock_active": true,
+  "rules": {
+    "disallow_unauthorized_files": true,
+    "disallow_unauthorized_directories": true,
+    "require_explicit_user_permission": true,
+    "attach_vibe_map": true
+  },
+  "authorized_directories": [
+    ".agents",
+    ".agents/skills",
+    "src",
+    "src/core",
+    "src/api",
+    "src/models",
+    "src/services",
+    "src/utils",
+    "tests",
+    "tests/unit",
+    "tests/integration",
+    "config"
+  ],
+  "authorized_files": [
+    "PRD.md",
+    "ARCHITECTURE.md",
+    "AGENTS.md",
+    "SECURITY_AND_PERFORMANCE.md",
+    ".structure_lock.json",
+    ".gitignore",
+    "README.md"
+  ],
+  "permission_log": []
+}
