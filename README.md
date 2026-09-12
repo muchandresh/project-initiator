@@ -51,7 +51,10 @@ flowchart TD
 
 ### 3. `AGENTS.md` (Operational Guidelines & `/vibe-map` Integration)
 - Defines binding rules for AI agents operating in the repository.
-- **Mandatory `/vibe-map` Attachment:** Mandates running `/vibe-map impact` before modifying components and `/vibe-map update` after milestone completions.
+- **Mandatory `/vibe-map` Attachment ([Vibe-Map Repository](https://github.com/muchandresh/Vibe-Map)):** Mandates running `/vibe-map impact` before modifying components and `/vibe-map update` after milestone completions. If an agent does not have `/vibe-map`, it can be cloned directly via:
+  ```bash
+  git clone https://github.com/muchandresh/Vibe-Map.git .agents/skills/vibe-map
+  ```
 - Enforces strict typing, complete implementations (zero TODOs/stubs), and automated test coverage.
 
 ### 4. Scaffolding & Structure Lock (`.structure_lock.json`)

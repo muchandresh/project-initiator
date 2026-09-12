@@ -27,14 +27,18 @@ Need new file/dir? ➔ STOP ➔ Ask User: "I recommend creating <path> because <
 ---
 
 ### 🗺️ 2. MANDATORY INTEGRATION & EXECUTION OF `/vibe-map`
-This project mandates continuous architectural visibility and impact blast-radius analysis via the `/vibe-map` skill:
+This project mandates continuous architectural visibility, mental model mapping, and impact blast-radius analysis via the `/vibe-map` skill.
 
-1. **Skill Attachment:** Ensure the `/vibe-map` skill is attached to the project workspace (`.agents/skills/vibe-map/` or globally available).
+> **Official Repository:** [https://github.com/muchandresh/Vibe-Map](https://github.com/muchandresh/Vibe-Map)  
+> *If your agent environment does not recognize `/vibe-map`, attach it to the project workspace:*  
+> `mkdir -p .agents/skills && git clone https://github.com/muchandresh/Vibe-Map.git .agents/skills/vibe-map`
+
+1. **Skill Attachment:** Ensure `/vibe-map` is accessible in the workspace (`.agents/skills/vibe-map/` or globally).
 2. **Pre-Change Impact Check:** Before modifying or refactoring any core module or shared dependency, run:
    ```bash
    /vibe-map impact "<target_file>"
    ```
-   to assess what other components will be affected.
+   to assess what other components will be affected and prevent unintended breakage.
 3. **Post-Milestone Sync:** After completing any major feature or architectural change, trigger a map update:
    ```bash
    /vibe-map update

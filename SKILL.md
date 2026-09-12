@@ -140,8 +140,14 @@ Design the technical foundation based on the PRD:
 
 Establish strict rules of engagement for all AI agents and subagents touching this repository:
 
-1. **Mandatory `/vibe-map` Integration**:
+1. **Mandatory `/vibe-map` Integration & Fallback**:
    - Ensure the `/vibe-map` skill is attached or accessible in the workspace.
+   - **What is Vibe-Map?** It is an automated codebase cartographer and impact analyzer that uses AST parsing to create visual mental models (`VIBE_MAP.md`, `vibe_map.html`) and machine JSON (`codebase_map.json`).
+   - **Repository Link:** [https://github.com/muchandresh/Vibe-Map](https://github.com/muchandresh/Vibe-Map)
+   - **Fallback / Auto-Fetch:** If an agent or environment does not recognize `/vibe-map`, attach it to the project workspace:
+     ```bash
+     mkdir -p .agents/skills && git clone https://github.com/muchandresh/Vibe-Map.git .agents/skills/vibe-map
+     ```
    - **Pre-Change Impact Rule:** Before refactoring or modifying components, agents MUST run:
      ```bash
      /vibe-map impact "<target_file>"
