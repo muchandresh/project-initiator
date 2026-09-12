@@ -12,31 +12,42 @@ When building apps with AI agents, models often jump straight into writing code 
 - Mismatched tech stacks and missing data models
 - Code with security vulnerabilities and unindexed database bottlenecks
 - Zero architectural persistence or change-impact tracking
+- Ignored branding, missing visual assets, and neglected user constraints
 
-**`project-initiator`** halts premature code generation. Before any feature code is written, it initiates a structured pre-flight alignment session that outputs five foundational artifacts in exact sequence:
+**`project-initiator`** halts premature code generation. It enforces a **Think-First, Research-Deep, Build-Locked** methodology:
 
 ```mermaid
-flowchart LR
-    A[1. Idea & PRD] --> B[2. Architecture]
-    B --> C[3. Agent Rules & Vibe-Map]
-    C --> D[4. Scaffolding & Structure Lock]
-    D --> E[5. Security & Performance Spec]
-    E --> F[✨ Ready to Build]
+flowchart TD
+    A[🧠 Stage 0: Think, Plan & Research Assets] --> B[1. PRD & Idea Brief]
+    B --> C[2. System Architecture]
+    C --> D[3. Agent Rules & Vibe-Map]
+    D --> E[4. Scaffolding & Structure Lock]
+    E --> F[5. Security & Performance Spec]
+    F --> G[✨ Foundation Locked: Ready to Build]
 ```
 
 ---
 
-## 🏛️ The Five Pre-Flight Pillars
+## 🏛️ The Pre-Flight Architecture
+
+### 🧠 Stage 0: Collaborative Thinking, Planning & Asset Research
+- **Thought Alignment & Discovery Planning:** The agent pauses, reflects, outlines an exploration roadmap, and asks all necessary foundational questions upfront.
+- **Brand Guidelines & Visual Identity:** Captures brand voice, tone, color schemes, typography, and design aesthetics.
+- **Visual Assets & Logos:** Solicits logos, icons, UI wireframes, Figma mockups, and image assets to attach to the project.
+- **Reference Research:** Actively investigates reference URLs, competitor benchmarks, or repositories provided by the user using web search / URL tools.
+- **Custom Requirements:** Uncovers unique domain logic, regulatory constraints (GDPR/HIPAA), and deployment environments.
+- **Plan Synthesis:** Synthesizes all inputs and validates alignment with the user before generating documents.
 
 ### 1. `PRD.md` (Product Requirements Document & Idea Brief)
 - Captures the complete project brief, vision, user personas, problem space, and success criteria.
 - Establishes the MVP scope (Must-Haves) and strictly defines non-goals to prevent scope creep.
 - Outlines the primary user journey flow with interactive Mermaid diagrams.
+- Documents brand guidelines, visual assets, and reference URLs.
 
 ### 2. `ARCHITECTURE.md` (System Design & Technology Blueprint)
 - Conducts technical stack discovery (Language, UI, API, Database, Caching, Queue).
 - Recommends optimal architectures or adopts user preferences.
-- Details component boundaries, data flow pipelines, schema contracts, and scalability boundaries.
+- Details component boundaries, data flow pipelines, schema contracts, and Mermaid system architecture diagrams.
 
 ### 3. `AGENTS.md` (Operational Guidelines & `/vibe-map` Integration)
 - Defines binding rules for AI agents operating in the repository.
@@ -56,13 +67,13 @@ flowchart LR
 
 ## 🌐 Cross-Platform Compatibility
 
-| Agent Platform | Interactive Discovery Mode | Scaffolding & Lock Enforcement | Visual Maps & Blueprints |
+| Agent Platform | Collaborative Planning & Discovery | Asset & Reference Research | Scaffolding & Lock Enforcement |
 | :--- | :--- | :--- | :--- |
-| **Google Antigravity** | Native modal `ask_question` UI | Native file tools + `init_scaffold.py` + Artifacts | Mermaid rendered in chat & artifacts |
-| **Claude Code** | Numbered interactive CLI menus | Shell execution + `.structure_lock.json` | Mermaid / ASCII terminal trees |
-| **Cursor / Windsurf** | Interactive chat numbered prompts | Workspace files + rules enforcement | Webview Mermaid previews |
-| **Cline / Roo-Code** | Interactive prompt iterations | Direct tool calls + lockfile verification | Mermaid markdown rendering |
-| **GitHub Copilot CLI** | Interactive terminal prompt steps | Shell execution | Terminal trees |
+| **Google Antigravity** | Native modal `ask_question` UI | `read_url_content`, Web Search, Artifacts | Native file tools + `init_scaffold.py` + Artifacts |
+| **Claude Code** | Numbered interactive CLI menus | `WebFetch`, `curl`, local file inspection | Shell execution + `.structure_lock.json` |
+| **Cursor / Windsurf** | Interactive chat numbered prompts | Chat URL attachments & local file reads | Workspace files + rules enforcement |
+| **Cline / Roo-Code** | Interactive prompt iterations | Web browser tool / local file tools | Direct tool calls + lockfile verification |
+| **OpenAI / ChatGPT** | Structured markdown Q&A rounds | Web browsing tool & image uploads | Canvas / Direct workspace files |
 
 ---
 
@@ -115,30 +126,6 @@ python3 scripts/init_scaffold.py --grant "src/services/billing.ts" --reason "Use
 
 # Attach to a specific workspace
 ./install.sh --project /path/to/my/project
-```
-
----
-
-## 📂 Repository Layout
-
-```text
-project_initiator/
-├── SKILL.md                      # Main universal skill definition
-├── README.md                     # Documentation & usage guide
-├── install.sh                    # Universal multi-agent installer
-├── LICENSE                       # MIT License
-├── scripts/
-│   ├── init_scaffold.py          # Scaffolding generator & lock verifier
-│   └── check_lock.py             # Pre-commit & CI structural checker
-├── templates/
-│   ├── PRD.template.md           # Gold-standard PRD & Idea template
-│   ├── ARCHITECTURE.template.md  # System design & architecture template
-│   ├── AGENTS.template.md        # Agent rules with /vibe-map & lock rules
-│   ├── SECURITY_AND_PERFORMANCE.template.md # Guardrails & budgets
-│   └── structure_lock.template.json # JSON structure lock schema
-└── references/
-    ├── discovery_questions.md    # Phased interactive question sequences
-    └── vibe_map_integration.md   # Blast-radius mapping integration guide
 ```
 
 ---

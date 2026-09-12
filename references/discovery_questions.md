@@ -4,6 +4,26 @@ This document outlines the phased question sequences used during the pre-flight 
 
 ---
 
+## 🧠 Phase 0: Collaborative Thinking, Planning & Deep Asset Research
+
+Before generating specifications, pause and think through the plan with the user.
+
+### 0.1 Collaborative Planning & Alignment
+1. **Initial Thought Alignment:** "Here is how I plan to approach discovering and scaffolding your project. Does this roadmap align with your expectations?"
+2. **Key Motivations:** What is the primary driving force behind starting this project now?
+
+### 0.2 Brand Guidelines & Visual Assets
+1. **Brand Identity & Aesthetic:** Do you have existing brand guidelines, color palettes, or a preferred aesthetic style (e.g. minimalist dark mode, neo-brutalist, retro terminal, clean enterprise)?
+2. **Logos & Media Assets:** Do you have logos, icons, mockups, or image assets you want attached or referenced in the project? (Provide file paths or URLs).
+3. **Reference Websites / Apps:** Are there specific websites, repositories, or tools whose vibe, design, or architecture you admire? (Provide URLs or names).
+
+### 0.3 Specific Requirements & Deep Research
+1. **Specific Custom Requirements:** Are there unique business rules, custom workflows, or proprietary formulas needed?
+2. **Regulatory & Compliance:** Any specific data handling, privacy (GDPR, HIPAA), or security standards?
+3. **Target Platforms / Deployments:** Self-hosted CLI, cloud microservice, serverless, mobile, or desktop?
+
+---
+
 ## 💡 Phase 1: Idea Discovery & PRD Formulation
 
 ### 1.1 Project Vision & Problem Space

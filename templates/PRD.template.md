@@ -89,8 +89,32 @@ sequenceDiagram
 
 ---
 
-## 🛡️ 5. Assumptions, Dependencies & Constraints
+## 🎨 5. Brand Guidelines, Visual Assets & Aesthetic Direction
 
+### 5.1 Brand Identity & Voice
+- **Brand Voice / Tone:** {{e.g. Minimal, playful, cybernetic, enterprise-clean}}
+- **Primary Color Palette:** {{Primary: #HEX, Secondary: #HEX, Accent: #HEX, Background: #HEX}}
+- **Typography:** {{Headings Font, Body Font, Monospace Code Font}}
+
+### 5.2 Attached Visual Assets & References
+- **Logos / Icons:** {{File paths or URLs to logos, favicons, app icons}}
+- **Reference Mockups / Wireframes:** {{Figma links, screenshot paths, whiteboard diagrams}}
+- **Inspirational References:** {{Links to apps/sites with desired vibe or interactions}}
+
+---
+
+## 🔬 6. Research Findings & Competitor Analysis
+
+| Reference / Competitor | Key Strengths / Inspiration | Weaknesses / Differentiators |
+| :--- | :--- | :--- |
+| **Reference A** | {{What they do exceptionally well}} | {{What we will do better / simpler}} |
+| **Reference B** | {{Visual or architectural takeaway}} | {{Gaps in their implementation}} |
+
+---
+
+## ⚙️ 7. Specific Custom Requirements & Constraints
+
+- **Custom Business Rules:** {{Specific domain rules, workflows, or validation}}
+- **Compliance & Regulatory:** {{GDPR, HIPAA, SOC2, or specific data retention}}
 - **Technical Assumptions:** {{e.g., Python 3.10+, Node 20+, Docker}}
-- **External Dependencies:** {{APIs, rate limits, licensed assets}}
 - **Platform Constraints:** {{OS limitations, memory limits, browser support}}
