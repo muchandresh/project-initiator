@@ -82,3 +82,18 @@ flowchart TD
   /vibe-map update
   ```
   *Regenerates `vibe-map-out/codebase_map.json` and `vibe-map-out/VIBE_MAP.md` after implementing new features.*
+
+---
+
+## 🐞 4. Post-Handover Debugging: Version & File History
+
+When an agent switches in and the user asks to debug a new error or unexpected regression:
+1. **Version History & Structural Snapshots:**  
+   `vibe-map` maintains structural state across updates. Incoming agents can compare the current structure against previous snapshots to see which files were recently created, deleted, or refactored.
+2. **Finding the Root Cause Fast:**  
+   Instead of searching through all files blindly:
+   - Identify the file reported in the error stack trace.
+   - Run `/vibe-map trace "<entry_file>" "<error_file>"` to understand what called it.
+   - Run `/vibe-map impact "<error_file>"` to verify what other functions broke as a ripple effect.
+3. **Differential Analysis:**  
+   Combine `git diff` with `codebase_map.json` to see how changes in interfaces or function signatures broke upstream callers.

@@ -72,7 +72,19 @@ Incoming agent, pick up work directly from this ordered list:
 
 ---
 
-## 📜 5. Handover Session Changelog
+## 🐞 5. Post-Handover Debugging & History Diagnostics
+
+If you are asked to debug an error, crash, or regression that appeared after this handover:
+1. **Version & History Inspection:**  
+   Inspect `vibe-map-out/` snapshots and git diffs to see the exact files, functions, or imports modified right before the bug manifested.
+2. **Blast Radius Analysis:**  
+   Run `/vibe-map impact "<modified_file>"` to identify all downstream consumers that could be receiving broken contracts or unhandled exceptions.
+3. **Execution Path Tracing:**  
+   Run `/vibe-map trace "<entry_file>" "<target_file>"` to visualize how data flows between the failure point and caller.
+
+---
+
+## 📜 6. Handover Session Changelog
 
 | Timestamp | Outgoing Agent / Model | Incoming Agent / Model | Summary of Work Completed | Next Agent Goal |
 | :--- | :--- | :--- | :--- | :--- |
