@@ -11,7 +11,8 @@
 [![Vibe-Map Compatible](https://img.shields.io/badge/Vibe--Map-Integrated-emerald.svg)](https://github.com/muchandresh/Vibe-Map)
 
 <p align="center">
-  <b>Halt premature code generation.</b> Think first, plan with the user, lock the directory scaffolding, and make AI coding foolproof across any model or platform.
+  <b>The smart way to start any coding project with AI.</b><br>
+  Brainstorm your idea, align on architecture, lock clean folders, and keep full project context across every model and tool.
 </p>
 
 ---

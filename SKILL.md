@@ -1,28 +1,23 @@
 ---
 name: project-initiator
-description: "Antigravity-focused universal pre-flight project initialization, idea discovery, and cross-agent handover skill. Conducts an interactive thinking, planning, and asset research discovery (brand guidelines, visual assets, logos, reference URLs, and custom requirements) before generating in sequence: PRD & Idea Brief, ARCHITECTURE.md, AGENTS.md (with /vibe-map integration), strict Directory & File Structure Scaffolding with an immutable permission lock, SECURITY_AND_PERFORMANCE.md, and HANDOVER.md for seamless cross-model & platform state transfer."
+description: "Universal pre-flight project initiator and idea discovery skill. Guides you through planning, branding, architecture, and scaffolding before writing code—creating PRD, Architecture, Agent rules, folder locks, security standards, and seamless cross-model handover."
 ---
 
 # 🚀 Project Initiator
 
-> **An Antigravity-centric, cross-agent universal pre-flight protocol for initializing projects with deep planning, collaborative research, architectural alignment, strict scaffolding locks, proactive guardrails, and seamless cross-model handover before a single line of business logic is written.**
+> **Your AI pair-architect before writing a single line of code. Brainstorm ideas, plan technical architecture, lock clean folder scaffolding, and ensure seamless handoffs across any AI tool or model.**
 
 ---
 
 ## 🧭 Overview & Philosophy
 
-The most common failure mode in AI-assisted software engineering is **Premature Implementation Disease**:
-- The model starts generating code immediately based on a vague prompt without pausing to think or plan.
-- It fails to ask about branding, design aesthetic, reference sites, or existing logos and assets.
-- It invents random file paths, scatters utilities across arbitrary folders, and creates circular dependencies.
-- It skips security best practices, ignores performance budgets, and leaves behind technical debt.
-- When switching between models, accounts, or platforms (e.g. Antigravity IDE to CLI, or Claude Code / Cursor), context is lost and the new agent wanders blindly.
+Most AI coding assistants jump straight into writing code without understanding the bigger picture. This often leads to disorganized folder trees, missing brand assets, overlooked security requirements, and lost context whenever you switch tools or models.
 
-**`project-initiator`** halts premature code generation. It enforces a **Think-First, Research-Deep, Build-Locked, Handover-Ready** methodology:
-1. **Pause & Plan Collaboratively:** The agent thinks through the domain, plans the exploration roadmap with the user, and asks all necessary scoping questions.
-2. **Deep Research & Asset Discovery:** The agent solicits brand guidelines, logos, images, design systems, reference URLs, and specific business constraints.
-3. **Pillar Artifact Generation:** Once all inputs and research are consolidated, it generates `PRD.md`, `ARCHITECTURE.md`, `AGENTS.md` (with `/vibe-map`), Scaffolding + `.structure_lock.json`, `SECURITY_AND_PERFORMANCE.md`, and `HANDOVER.md`.
-4. **Cross-Agent Handover & Map-First State:** Any incoming model or agent reads `HANDOVER.md`, ingests the codebase map/graph first, and picks up exactly where the last agent left off.
+**`project-initiator`** makes sure your project starts on a rock-solid foundation. It guides you through a thoughtful, collaborative planning flow before writing any code:
+1. **Plan & Brainstorm Together:** The agent outlines an exploration plan and asks the right scoping questions about your vision and goals.
+2. **Explore Assets & Branding:** Discuss brand voice, color schemes, logos, and reference URLs you want to emulate.
+3. **Build the Core Blueprints:** Generates `PRD.md`, `ARCHITECTURE.md`, `AGENTS.md` (with `/vibe-map`), Scaffolding + `.structure_lock.json`, `SECURITY_AND_PERFORMANCE.md`, and `HANDOVER.md`.
+4. **Seamless Cross-Agent Continuity:** Any incoming model or agent reads `HANDOVER.md`, ingests the codebase map first, and picks up exactly where the last session left off.
 
 ---
 
