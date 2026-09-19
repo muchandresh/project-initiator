@@ -15,6 +15,10 @@ sys.path.insert(0, str(SCRIPT_DIR))
 from init_scaffold import verify_structure
 
 def main():
+    if len(sys.argv) > 1 and sys.argv[1] in ("-h", "--help"):
+        print("Usage: check_lock.py [project_root_dir]")
+        print("Verifies project files against .structure_lock.json. Returns 0 if valid, 1 if violations.")
+        sys.exit(0)
     root = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else Path.cwd()
     passed = verify_structure(root)
     sys.exit(0 if passed else 1)
