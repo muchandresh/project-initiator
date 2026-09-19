@@ -2,7 +2,7 @@
 
 <img src="assets/banner.svg" alt="PI! - Project Initiator Banner" width="100%" />
 
-# 🚀 PI! — Project Initiator
+# 🚀 PI! - Project Initiator
 
 **Universal Pre-Flight Idea Discovery, Architectural Lock & Cross-Agent Handover Protocol**
 
